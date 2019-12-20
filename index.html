@@ -1,0 +1,730 @@
+<html >
+<head>
+	<meta charset="UTF-8">
+	 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<style>
+
+
+.default-form {
+	display: block;
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 38.5rem;
+	padding: 2.5rem;
+	box-shadow: 0 0.375rem 1rem rgba(0, 0, 0, .2);
+	border-radius: 3px;
+	transition: .5s;
+	background: rgba(240, 240, 240, 0.651)
+}
+
+.default-form:hover {
+background: rgba(240, 240, 240, 0.927);
+box-shadow: 0 0.375rem 1rem rgba(0, 0, 0, 0.438);
+transition: .5s;
+}
+
+.default-form__form-title {
+	display: block;
+	margin-bottom: 2rem;
+}
+
+.default-form__form-title--main-title {
+	font-size: 2.5rem;
+	text-align: center;
+}
+
+.default-form__form-title--subtitle {
+	font-size: 1.125rem;
+	text-align: center;
+	opacity: 0.75;
+	margin-top: .5rem;
+}
+
+.default-form__input-box, .default-form__submit-button {
+	font-size: 1.125rem;
+	padding: .5rem .75rem;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	display: block;
+	margin: 0 auto;
+	width: 15rem;
+  box-sizing: border-box;
+}
+
+.default-form__input-box::placeholder {
+	opacity: .65;
+}
+
+.default-form__input-box:not(:last-child), .default-form__submit-button:not(:last-child) {
+	margin-bottom: .75rem;
+}
+
+.default-form__submit-button {
+	color: rgb(244, 244, 244);
+	background-color: #009dff;
+	cursor: pointer;
+}
+
+
+</style>
+
+
+
+
+<style>
+
+
+
+ .header {
+	 background: #222535;
+	 border-bottom: 2px solid #404664;
+	 color: #fff;
+	 font-size: 1.2rem;
+	 height: 3rem;
+	 line-height: 3rem;
+	 padding: 0 1.5rem;
+	 margin-left: -0.75rem;
+}
+ .header a {
+	 color: #fff;
+	 font-weight: 300;
+	 text-decoration: none;
+	 margin: 0.25rem;
+}
+ .header a:hover {
+	 color: #389be6;
+}
+ .searchCardFrame {
+	 display: inline-block;
+	 /* float: left; */
+	 width: 800px;
+	 margin-left: 0.75rem;
+	 padding-right: 0.75rem;
+	 padding-left: 0;
+	 /* border-right: 1px solid #d7d9e5; */
+	 border-radius: 12px;
+	 /* background: #d7e0e5; */
+	 background: #f5f5f587;
+	 box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
+	 top: 300px;
+	 position: relative;
+    left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	height: 500px;
+	overflow-y: scroll;
+}
+ .searchCardFrame:last-of-type {
+	 border-right: none;
+}
+ .card-header {
+	 display: block;
+	 width: 100%;
+}
+ .card-header-title {
+	 font-size: 1.5rem;
+	 font-weight: 300;
+	 margin-bottom: 0.5rem;
+}
+ .card-header-status {
+	 color: #5f676b;
+	 font-size: 0.9rem;
+}
+ .card-item {
+	 display: block;
+	 background: #fff;
+	 width: 520px;
+	 padding: 0.75rem 1.5rem 0.75rem 1.25rem;
+	 margin: 1.5rem 0;
+	 border-left: 0.25rem solid #999ebd;
+	 border-radius: 3px;
+	 box-shadow: 0 10px 6px -6px #777;
+	 transition: background-color 0.24s ease;
+	 height: 160px;
+	 top: 80px;
+	 left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	position: relative;
+}
+ .card-item:hover {
+	 background: #f5f5f5;
+}
+ .card-win {
+	 border-color: #5aa12c;
+}
+ .card-win .card-price {
+	 color: #5aa12c;
+}
+ .card-loss {
+	 border-color: #e92e00;
+}
+ .card-loss .card-price {
+	 color: #000000;
+}
+ .card-title {
+	 font-size: 1.5rem;
+	 font-weight: 300;
+	 margin-top: 0;
+}
+ .card-info {
+	 font-size: 0.9rem;
+}
+ .card-menu {
+	 color: #929a9e;
+	 font-size: 0.9rem;
+}
+ .card-price {
+	 font-weight: normal;
+	 margin-top: 0;
+	 margin-bottom: 0;
+	 height: 28px;
+	width: 100px;
+	top: 8px;
+	border-radius: 5px;
+	position: relative;
+	cursor: pointer;
+}
+ .card-overdue {
+	 color: #000000;
+	 font-weight: bold;
+}
+ .list-inline {
+	 padding-left: 0;
+	 list-style: none;
+}
+ .list-inline li {
+	 display: inline-block;
+	 margin-right: 0.25rem;
+}
+ .left {
+	 float: left;
+}
+ .right {
+	 float: right;
+}
+ .win {
+	 color: #5aa12c;
+}
+ .loss {
+	 color: #e92e00;
+}
+ 
+
+
+</style>
+
+
+
+
+
+
+
+
+
+<body>
+
+		<form class="default-form" id="Entry_Form">
+				<img src="cigna.png" style="position: relative; left: 152px;">
+				<header class="default-form__form-title">
+					<h1 class="default-form__form-title--main-title">360 Product Portal</h1>
+					<p class="default-form__form-title--subtitle">Enter your LAN ID to search for Features that belong to you</p>
+				</header>
+				<div class="default-form__form-main-area">
+					<input id="PO_Search" class="default-form__input-box default-form__input-box--username" type="text" placeholder="Enter Username">
+					<br>
+					<input class="default-form__submit-button" type="button" value="Search" id="user_search_button">
+				</div>
+			</form>
+
+
+
+
+
+
+
+
+
+<script>
+
+	var feature_data = {"Results":[
+{
+    "Feature_ID":"F12345",
+    "Title":"Elementum vivamus nisivi troscup semper",
+    "Status":"In Progress",
+    "DBA":"Y"
+},
+{
+    "Feature_ID":"F62337",
+    "Title":"Vivamus elementum semper nisivi troscup",
+    "Status":"Backlog",
+    "DBA":"N"
+},
+{
+    "Feature_ID":"F91003",
+    "Title":"Nisivi troscup ivamus elementum semper",
+    "Status":"Done",
+    "DBA":"Y"
+},
+{
+    "Feature_ID":"F21866",
+    "Title":"Amortsonium elementum semper nisivi troscup",
+    "Status":"In Progress",
+    "DBA":"Y"
+},
+{
+    "Feature_ID":"F44612",
+    "Title":"Elementum vivamus nisivi troscup semper",
+    "Status":"In Progress",
+    "DBA":"Y"
+},
+{
+    "Feature_ID":"F32008",
+    "Title":"Vivamus elementum semper nisivi troscup",
+    "Status":"Backlog",
+    "DBA":"N"
+},
+{
+    "Feature_ID":"F89102",
+    "Title":"Nisivi troscup ivamus elementum semper",
+    "Status":"Done",
+    "DBA":"Y"
+}
+]}
+
+
+var Feature_Checking = function(lan_id){
+
+	 document.getElementById('Entry_Form').style.display='none';
+
+
+	var Results_Title = document.createElement('h1')
+	Results_Title.innerText = 'Features for LAN ID ' + lan_id
+	Results_Title.setAttribute('id','Results_Title')
+	Results_Title.setAttribute('style','    text-align: center; top: 40px; position: relative;')
+	document.body.appendChild(Results_Title)
+
+	var Owned_Features_Frame = document.createElement('ul')
+	Owned_Features_Frame.setAttribute('class','searchCardFrame')
+	Owned_Features_Frame.setAttribute('id','PO_Search_Results')
+
+	//Instantiate Objects
+	for (i=0; i<feature_data.Results.length; i++){
+
+		result_num = i+1
+		// Create the list item result
+		var feature_result = document.createElement('li')
+		feature_result.setAttribute('id','feature_result_'+result_num)
+
+		// Logic to check color for class
+		if (feature_data.Results[i].DBA == 'Y'){
+		feature_result.setAttribute('class','card-item card-win')
+		} else {
+		feature_result.setAttribute('class','card-item card-loss')
+		}
+
+
+			// Add Unique ID
+			var feature_unqID = document.createElement('h3')
+			feature_unqID.setAttribute('class','card-title')
+			feature_unqID.innerText = feature_data.Results[i].Feature_ID
+			feature_result.appendChild(feature_unqID)
+
+			// Add Title
+			var feature_title = document.createElement('p')
+			feature_title.setAttribute('class','card-info card-overdue')
+			feature_title.innerText = feature_data.Results[i].Title;
+			feature_result.appendChild(feature_title)
+
+			//Sublist for lefthand status
+			var feature_status_menu = document.createElement('ul')
+			feature_status_menu.setAttribute('class','list-inline card-menu left')
+			var feature_status = document.createElement('li')
+			feature_status.setAttribute('class','card-menu-item')
+			feature_status.innerText= feature_data.Results[i].Status
+			feature_status_menu.appendChild(feature_status)
+			feature_result.appendChild(feature_status_menu)
+
+
+			//Selection Button
+			var feature_button = document.createElement('button')
+			feature_button.name = feature_data.Results[i].Feature_ID
+			feature_button.setAttribute('class','card-price right')
+			feature_button.setAttribute('id','feature_button_'+result_num)
+			feature_button.innerText = 'Select'
+			feature_result.appendChild(feature_button)
+
+
+			Owned_Features_Frame.appendChild(feature_result)
+
+
+	}
+
+	// Add Objects to page
+	Owned_Features_Frame.style.display='none'
+	document.body.appendChild(Owned_Features_Frame)
+	$('#PO_Search_Results').fadeIn(2000);
+
+
+	// Instantiate Event Listeners
+	for (j=0; j<feature_data.Results.length; j++){
+		iter_num = j+1
+		let element = 'feature_button_'+iter_num
+		document.getElementById(element).addEventListener('click',function(){
+
+			console.log(this.name)
+			document.getElementById('PO_Search_Results').style.display = 'none';
+			document.getElementById('Results_Title').innerText = "Form Submission for "+this.name;
+			Feature_Submission(this.name)
+
+			
+			})
+
+	}
+
+}
+
+</script>
+			<!-- This is the feature search list -->
+
+<!-- 
+			<ul class="searchCardFrame">
+					
+					<li class="card-item card-win">
+					  <h3 class="card-title">F12345</h3>
+					  
+					  <p class="card-info card-overdue">Migrate CCW Client View to AWS Aurora with new 360 layout</p>
+					  
+					  <ul class="list-inline card-menu left">
+						<li class="card-menu-item">In Progress</li>
+					  </ul>
+					  
+					  <button class="card-price right">Select</button>
+					</li>
+
+			</ul> -->
+
+
+
+
+
+
+</body>
+
+
+
+
+<script>
+
+
+// Add Event Listener for Main Button
+document.getElementById('user_search_button').addEventListener('click',function(){
+	//Pass in LAN ID being searched for
+	Feature_Checking(document.getElementById('PO_Search').value)
+	})
+
+
+	//Global variables for state management
+var Q1_State = false
+var Q2_State = false
+var Q3_State = false
+var Q4_State = false
+var Q5_State = false
+var Q6_State = false
+var Q7_State = false
+
+var Q1_Value = []
+var Q2_Value = []
+var Q3_Value = []
+var Q4_Value = []
+var Q5_Value = []
+var Q6_Value = []
+var Q7_Value = []
+
+
+
+var Feature_Submission = function(Feature_ID){
+
+
+
+	var data = {"Results":[
+{
+    "Question":"Vivamus elementum semper nisivi troscup",
+    "Answers":[
+            {"Answer":"Average of $1-$5M / year"},
+            {"Answer":"More than $10M / year"},
+            {"Answer":"Less than $1M / year"}
+                ]
+},
+{
+    "Question":"Elementum vivamus nisivi troscup semper ",
+    "Answers":[
+            {"Answer":"Free up work for one employee"},
+            {"Answer":"Free up work for 2-3 employees"},
+            {"Answer":"Clear up work for entire team"}
+                ]
+},
+{
+    "Question":"Vivamus elementum semper nisivi troscup",
+    "Answers":[
+            {"Answer":"Clinical Diagnostic Services"},
+            {"Answer":"Forbadem Uothen Niagrem"},
+            {"Answer":"Illipsium for perturno"}
+                ]
+},
+{
+    "Question":"Nisivi troscup ivamus elementum semper",
+    "Answers":[
+            {"Answer":"Allocposmun +200"},
+            {"Answer":"Reportorsium -300"},
+            {"Answer":"This does not apply (N/A)"}
+                ]
+},
+{
+    "Question":"Amortsonium elementum semper nisivi troscup",
+    "Answers":[
+            {"Answer":"Apricato niepsi paramoon"},
+            {"Answer":"Limposanium ini jokale"},
+            {"Answer":"Spillango il fatto iello"}
+                ]
+},
+{
+    "Question":"Vorsata fi che semper nisivi troscup",
+    "Answers":[
+            {"Answer":"Massimus attoro acorium"},
+            {"Answer":"Avereatto cuan limpo "},
+            {"Answer":"Minzatto popo loosum"}
+                ]
+},
+{
+    "Question":"Vivamus elementum semper nisivi troscup",
+    "Answers":[
+            {"Answer":"Ignatto il parro 1-2"},
+            {"Answer":"Miangato pa foro 2-3"},
+            {"Answer":"Nonse che applicco (N/A)"}
+                ]
+}
+
+]}
+
+
+
+
+
+//var data = JSON.stringify(data)
+for(i=0; i<data["Results"].length; i++){
+	
+	QuestionNumber = i+1
+	console.log(data["Results"][i].Question)
+
+// Create Whole Article
+	var Card_Article = document.createElement("article")
+	Card_Article.setAttribute('class','card')
+	Card_Article.setAttribute('id','Card_Article_'+QuestionNumber)
+
+	//Create Header
+		var Card_Header = document.createElement('header')
+		Card_Header.setAttribute('class','card__thumb')
+
+			// Create frame for background
+			var Card_BackgroundIMG_Frame = document.createElement('a')
+			var Card_BackgroundIMG_Frame_ID = "card_frameid_"+QuestionNumber
+			Card_BackgroundIMG_Frame.setAttribute('id',Card_BackgroundIMG_Frame_ID)
+
+					//Create background element
+					var Card_BackgroundIMG = document.createElement('img')
+					Card_BackgroundIMG.setAttribute('src','blue_background.png')
+					Card_BackgroundIMG.setAttribute('id','Card_Background_'+QuestionNumber)
+
+	// Bind Header together
+	Card_BackgroundIMG_Frame.appendChild(Card_BackgroundIMG)
+	Card_Header.appendChild(Card_BackgroundIMG_Frame)
+
+//Add header to Article
+Card_Article.appendChild(Card_Header)
+
+	//Create top right infographic
+	var Chip_Div = document.createElement('div')
+	Chip_Div.setAttribute('class','card__date')
+	Chip_Div.setAttribute('id','Chip_Div_'+QuestionNumber)
+
+			//Top Text
+			var Chip_TopText = document.createElement('span')
+			Chip_TopText.setAttribute('class','card__date__day')
+			Chip_TopText.innerText="Q"
+
+			//Bottom Text
+			var Chip_BottomText = document.createElement('span')
+			Chip_BottomText.setAttribute('class','card__date__day')
+			Chip_BottomText.innerText=QuestionNumber
+
+	//Add text to top right infographic
+	Chip_Div.appendChild(Chip_TopText)
+	Chip_Div.appendChild(Chip_BottomText)
+
+//Add infographic to Article
+Card_Article.appendChild(Chip_Div)
+
+
+
+	// Create Card Body
+	var Card_Body = document.createElement('div')
+	Card_Body.setAttribute('class','card__body')
+
+			//Create Blue Flag Element
+			var Card_Blue_Flag = document.createElement('div')
+			Card_Blue_Flag.setAttribute('class','card__category')
+			Card_Blue_Flag.innerText='INCOMPLETE'
+			Card_Blue_Flag.setAttribute('id','card_flag_ind_'+QuestionNumber)
+
+
+			//Create Title for Card
+			var Card_Title_Frame = document.createElement('div')
+			Card_Title_Frame.setAttribute('class','card__title')
+			Card_Title_Frame.innerText= data["Results"][i].Question
+			Card_Title_Frame.setAttribute('style','padding-bottom: 70px')
+
+					// Breaker for Title
+					var breakTitle = document.createElement('br')
+					Card_Title_Frame.appendChild(breakTitle)
+
+
+			// Create Answers
+			var Card_Answers = document.createElement('div')
+			Card_Answers.setAttribute('class','card__description')
+
+					//Create Form
+					var Card_Form = document.createElement('form')
+					var Card_Form_ID = "card__form__"+QuestionNumber
+					Card_Form.setAttribute('id',Card_Form_ID)
+					Card_Form.setAttribute('style','padding-top: 20px; position: relative; top: 50px; left: 50px;')
+					Card_Form.setAttribute('class','Card_Form')
+
+
+					//Create Checkboxes
+
+				 for(j=0; j<data["Results"][i].Answers.length; j++){
+					 	console.log(j)
+						jn = j+1
+						 var spanbox = document.createElement('span')
+						 spanbox.setAttribute('style','text-align:center; display:flexbox; overflow: hidden')
+						var inputBox = document.createElement('input')
+						inputBox.setAttribute('type','checkbox')
+						inputBoxID = 'question_'+QuestionNumber+'_inputbox_'+jn
+						inputBox.setAttribute('id',inputBoxID)
+						inputBox.setAttribute('style','padding-top: -60px; padding-bottom: 60px; float:left;')
+						inputBox.setAttribute('value',data["Results"][i].Answers[j].Answer)
+						var inputBoxText = document.createElement('h6')
+						inputBoxText.innerText = data["Results"][i].Answers[j].Answer
+						inputBoxText.setAttribute('style','    float: right; font-size: 12px; font-weight: 200; margin: 0; position: relative; text-align: left; left: -40%;')
+						spanbox.appendChild(inputBox)
+						spanbox.appendChild(inputBoxText)
+						
+						console.log(inputBox)
+						console.log("Answer added for form")
+						console.log(data["Results"][i].Answers[j].Answer)
+						Card_Form.appendChild(spanbox)
+						Card_Answers.appendChild(Card_Form)
+						
+						linebreak = document.createElement("br");
+						Card_Form.appendChild(linebreak);
+
+
+				 }	
+				 //Card_Form.appendChild(inputBox)
+						Card_Answers.appendChild(Card_Form)
+					
+
+// Append to Card Body
+Card_Title_Frame.appendChild(Card_Form)
+Card_Body.appendChild(Card_Blue_Flag)
+Card_Body.appendChild(Card_Title_Frame)
+Card_Body.appendChild(Card_Answers)
+
+
+
+// Add all elements
+Card_Article.appendChild(Card_Body)
+
+document.body.appendChild(Card_Article)
+
+
+}
+
+
+
+
+// Create Event Listeners
+for (k=0; k<7;k++){
+	let qn = k+1
+
+
+		for (l=0;l<3;l++){
+			
+			let ln= l+1
+			document.getElementById('question_'+qn+'_inputbox_'+ln).addEventListener('click',function(){
+			let valuebucket = window['Q'+qn+'_Value']
+			valuebucket.push(this.value)
+			console.log(valuebucket)
+			let img_frame = document.getElementById('Card_Background_'+qn)
+			img_frame.setAttribute('src','green_background.png')
+			document.getElementById('card_flag_ind_'+qn).innerText= 'COMPLETE'
+			document.getElementById('card_flag_ind_'+qn).setAttribute('style','background-color:green')
+			document.getElementById('Chip_Div_'+qn).setAttribute('style','background-color:#00cc03;')
+
+			})
+
+
+		}
+
+
+}
+
+
+
+
+
+
+// END OF FORM CREATING FUNCTION
+}
+
+
+// <article class="card">
+// 		<header class="card__thumb">
+// 			<a href="#"><img src="https://images.unsplash.com/photo-1512466699224-9d8217244131?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=4b6f389eb54cb8e27ee8ee5d4040a5d7&dpr=1&auto=format&fit=crop&w=1000&q=80&cs=tinysrgb" >
+			
+// 		</header>
+// 		<div class="card__date">
+// 			<span class="card__date__day">23</span>
+// 			<span class="card__date__month">Mai</span>
+// 		</div>
+// 		<div class="card__body">
+// 			<div class="card__category"><a href="#">Category</div>
+// 			<div class="card__title"><a href="#">Vivamus elementum semper nisivi troscup</div>
+		// <div class="card__description">
+		// 							<form>
+								
+		// 								<input style="padding-top: -60px; padding-bottom: 60px;" type="checkbox">A<br>
+		// 								<input style="padding-top: -60px; padding-bottom: 60px;" type="checkbox">B<br>
+		// 								<input style="padding-top: -60px; padding-bottom: 60px;" type="checkbox">C<br>
+		// 								<br>
+										
+		// 								<button class="card__button">Apply</button>
+		// 							</form>
+		// 						</div>
+// 		</div>
+// 		<footer class="card__footer">
+// 			<span class="icon icon--time">6 min</span>
+// 			<span class="icon icon--comment"><a href="#">2 comments</span>
+// 		</footer>
+// 	</article>
+
+
+</script>
+
+
+</html>
